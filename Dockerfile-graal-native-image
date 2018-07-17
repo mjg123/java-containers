@@ -1,0 +1,19 @@
+FROM panga/graalvm-ce AS build
+
+ADD HelloContainer.java /app/
+WORKDIR /app
+RUN ["javac", "HelloContainer.java"]
+
+RUN native-image \
+    --no-server \
+    --static \
+    -cp . \
+    HelloContainer
+
+
+
+FROM scratch
+
+COPY --from=build /app/hellocontainer /
+
+CMD ["/hellocontainer", "From GraalVM native image"]
