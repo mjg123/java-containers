@@ -4,11 +4,38 @@
 
   - docker
   - perf
-  - download 10.0.1 and 11-ea-alpine
+  - gcc & zlib1g-dev
+  - download 10.0.1 from http://jdk.java.net/10/ and 11-ea-alpine from http://jdk.java.net/11/
+  - download graal from http://jdk.java.net/10/
 
-  - download graal
-  - apt install gcc zlib1g-dev
-  
+_Based on Ubuntu 18.04_
+
+Follow this guide: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04
+(ends with logging out and in again)
+
+```shell
+sudo apt install git gcc zlib1g-dev linux-tools-common linux-tools-generic linux-tools-$(uname -r)
+git clone https://github.com/mjg123/java-containers.git
+
+cd java-containers
+
+wget https://download.java.net/java/GA/jdk10/10.0.2/19aef61b38124481863b1413dce1855f/13/openjdk-10.0.2_linux-x64_bin.tar.gz
+wget https://download.java.net/java/early_access/alpine/22/binaries/openjdk-11-ea+22_linux-x64-musl_bin.tar.gz
+
+cd ..
+
+wget https://github.com/oracle/graal/releases/download/vm-1.0.0-rc4/graalvm-ce-1.0.0-rc4-linux-amd64.tar.gz
+
+tar xvf java-containers/openjdk-10*
+tar xvf graalvm*
+
+export JAVA_HOME=~/jdk-10.0.2
+export GRAAL_HOME=~/graalvm-ce-1.0.0-rc4
+
+$JAVA_HOME/bin/java -version
+$GRAAL_HOME/bin/java -version
+```
+
 NB version numbers embedded in filenames might have changed so check the Dockerfiles
 
 ## Demos

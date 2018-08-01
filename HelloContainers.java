@@ -9,14 +9,13 @@
  *  ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝
  **/
 
-class HelloContainerDays {
+class HelloContainer {
   public static void main(String... args){
     System.out.println("Hello " + String.join(" ", args));
   }
 }
 
-// Plain invocation: 156 ms
-// with CDS 123ms
-// with CDS + AOT 101ms
-
-
+// Plain:
+//
+//
+//
