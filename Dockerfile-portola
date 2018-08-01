@@ -10,5 +10,5 @@ RUN ["jlink", "--compress=2", \
 FROM alpine:latest
 COPY --from=build /linked /opt/jdk/
 ENV PATH=$PATH:/opt/jdk/bin
-ADD HelloContainer.class /
-CMD ["java", "-showversion", "HelloContainer", "From", "Portola"]
+ADD HelloContainers.class /
+CMD ["java", "-showversion", "HelloContainers", "From", "Portola"]

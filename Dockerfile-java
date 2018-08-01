@@ -2,5 +2,5 @@ FROM oraclelinux:7-slim
 ADD openjdk-10.0.2_linux-x64_bin.tar.gz /opt/jdk
 ENV PATH=$PATH:/opt/jdk/jdk-10.0.0.2/bin
 
-ADD HelloContainer.class /
-CMD ["java", "-showversion", "HelloContainer", "From Container"]
+ADD HelloContainers.class /
+CMD ["java", "-showversion", "HelloContainers", "From Container"]

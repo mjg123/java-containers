@@ -3,5 +3,5 @@ ADD openjdk-10.0.2_linux-x64_bin.tar.gz /opt/jdk
 ENV PATH=$PATH:/opt/jdk/jdk-10.0.2/bin
 
 RUN ["java", "-Xshare:dump"]
-ADD HelloContainer.class /
-CMD ["java", "-Xshare:on", "-showversion", "HelloContainer", "From Container"]
+ADD HelloContainers.class /
+CMD ["java", "-Xshare:on", "-showversion", "HelloContainers", "From Container"]
