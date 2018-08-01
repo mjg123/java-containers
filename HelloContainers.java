@@ -9,7 +9,7 @@
  *  ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝
  **/
 
-class HelloContainer {
+class HelloContainers {
   public static void main(String... args){
     System.out.println("Hello " + String.join(" ", args));
   }
