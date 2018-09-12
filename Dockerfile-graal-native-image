@@ -1,6 +1,6 @@
 FROM panga/graalvm-ce AS build
 
-ADD HelloContainer.java /app/
+ADD HelloContainers.java /app/
 WORKDIR /app
 RUN ["javac", "HelloContainers.java"]
 

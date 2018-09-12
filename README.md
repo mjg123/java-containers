@@ -5,8 +5,8 @@
   - docker
   - perf
   - gcc & zlib1g-dev
-  - download 10.0.1 from http://jdk.java.net/10/ and 11-ea-alpine from http://jdk.java.net/11/
-  - download graal from http://jdk.java.net/10/
+  - download JDK-11 and 11-aalpine from http://jdk.java.net/11/
+  - download graal from https://github.com/oracle/graal/releases
 
 _Based on Ubuntu 18.04_
 
@@ -19,14 +19,14 @@ git clone https://github.com/mjg123/java-containers.git
 
 cd java-containers
 
-wget https://download.java.net/java/GA/jdk10/10.0.2/19aef61b38124481863b1413dce1855f/13/openjdk-10.0.2_linux-x64_bin.tar.gz
-wget https://download.java.net/java/early_access/alpine/22/binaries/openjdk-11-ea+22_linux-x64-musl_bin.tar.gz
+wget https://download.java.net/java/early_access/jdk11/28/GPL/openjdk-11+28_linux-x64_bin.tar.gz
+wget https://download.java.net/java/early_access/alpine/28/binaries/openjdk-11+28_linux-x64-musl_bin.tar.gz
 
 cd ..
 
 wget https://github.com/oracle/graal/releases/download/vm-1.0.0-rc4/graalvm-ce-1.0.0-rc4-linux-amd64.tar.gz
 
-tar xvf java-containers/openjdk-10*
+tar xvf java-containers/openjdk-11*
 tar xvf graalvm*
 
 export JAVA_HOME=~/jdk-10.0.2
